@@ -1,0 +1,10 @@
+<h1 class="w3-center w3-container w3-indigo">Cadastro de caderno</h1>
+<form class="w3-container">
+    <div><label for="txtTitulo">Título:<input type="text" id="txtTitulo" name="Titulo" [(ngModel)]="caderno.Titulo" maxlength="1000" class="w3-input w3-border w3-round"></label></div>
+    <div><label for="txtValor">Valor:<input type="text" id="txtValor" name="Valor" [(ngModel)]="caderno.Valor" class="w3-input w3-border w3-round"></label></div>
+    <div><label for="txtNrFolhas">Número de folhas:<input type="text" id="txtNrFolhas" name="NrFolhas" [(ngModel)]="caderno.NrFolhas" class="w3-input w3-border w3-round"></label></div>
+    <div class= "w3-margin">
+        <button type="button" id="btnSalvar" class="w3-btn w3-indigo w3-round-xlarge" (click)="post()">Salvar</button>
+        <button type="button" id="btnVoltar" class="w3-btn w3-indigo w3-round-xlarge" (click)="goToIndex()">Voltar</button>
+    </div>
+</form>

@@ -1,0 +1,11 @@
+<h1 class="w3-center w3-container w3-indigo">Cadastro de gibi</h1>
+<form class="w3-container">
+    <div><label for="txtDescricao">Titulo:<input type="text" id="txtTitulo" name="Titulo" [(ngModel)]="gibi.Titulo" class="w3-input w3-border w3-round"></label></div>
+    <div><label for="txtValor">Valor:<input type="text" id="txtValor" name="Valor"  [(ngModel)]="gibi.Valor" class="w3-input w3-border w3-round"></label></div>
+    <div><label for="txtEditora">Editora:<input type="text" id="txtEditora" name="Editora" [(ngModel)]="gibi.Editora" class="w3-input w3-border w3-round"></label></div>
+    <div><label>Data de Publicacao:</label><input class="w3-input w3-border w3-round" type="date" id="txtDataPublicacao" name="dataPublicacao" [ngModel] = "gibi.DataPublicacao | date:'yyyy-MM-dd'" (ngModelChange)="gibi.DataPublicacao=$event"></div>
+    <div class= "w3-margin">
+        <button type="button" id="btnVoltar" class="w3-btn w3-indigo w3-round-xlarge" (click)="goToIndex()">Voltar</button>
+        <button type="button" id="btnSalvar" class="w3-btn w3-indigo w3-round-xlarge" (click)="put()">Alterar</button>
+    </div>
+</form>
